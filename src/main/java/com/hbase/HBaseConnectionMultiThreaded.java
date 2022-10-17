@@ -37,7 +37,6 @@ public class HBaseConnectionMultiThreaded {
         }
     }
 
-
     public static void main(String[] args) throws IOException {
 
         System.out.println(HBaseConnectionMultiThreaded.connection);
