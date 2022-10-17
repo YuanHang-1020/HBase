@@ -30,15 +30,12 @@ public class HBaseConnectionMultiThreaded {
 
     /**
      * 关闭hbase连接
-     * @throws IOException
      */
     public static void closeConnection() throws IOException {
-        if(connection != null){
+        if (connection != null) {
             connection.close();
         }
     }
-
-
 
 
     public static void main(String[] args) throws IOException {

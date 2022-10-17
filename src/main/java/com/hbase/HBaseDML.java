@@ -139,13 +139,14 @@ public class HBaseDML {
 
     /**
      * 带过滤的扫描
-     * @param namespace 命名空间
-     * @param tableName 表格名称
-     * @param startRow 开始的 row 包含的
-     * @param stopRow 结束的 row 不包含
+     *
+     * @param namespace    命名空间
+     * @param tableName    表格名称
+     * @param startRow     开始的 row 包含的
+     * @param stopRow      结束的 row 不包含
      * @param columnFamily 列族名称
-     * @param columnName 列名
-     * @param value value 值
+     * @param columnName   列名
+     * @param value        value 值
      */
     public static void filterScan(String namespace, String tableName, String startRow, String stopRow, String columnFamily, String columnName, String value) throws IOException {
         // 1. 获取 table
@@ -200,7 +201,7 @@ public class HBaseDML {
     }
 
 
-    public static void  deleteColumn(String namespace, String tableName, String rowKey, String columnFamily, String columnName) throws IOException {
+    public static void deleteColumn(String namespace, String tableName, String rowKey, String columnFamily, String columnName) throws IOException {
 
         // 1.获取 table
         Table table = connection.getTable(TableName.valueOf(namespace, tableName));
